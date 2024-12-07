@@ -99,6 +99,9 @@ Each SQL query performed by dataflows pipelines can be found at ./ETL/SQL
 
 ![alt text](./Docs/dataflows.png)
 
+The figure below shows an example of a successfull execution of a job forked from a pipeline
+![alt text](./Docs/JobRun.png)
+
 Finally, a Windows VM was provisioned to show the final report by means of a Report Server service available publicy without need to AD authentication (as PowerBI Service would require).
 
 ![alt text](./Docs/VM%20Instance.png)
