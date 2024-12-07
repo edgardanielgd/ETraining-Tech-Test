@@ -1,6 +1,6 @@
 from pyspark.sql.types import *
 
-# Define sources structure by means of struct definitions
+# Define sources structure
 
 cases_schema = StructType(
    [

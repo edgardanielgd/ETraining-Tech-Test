@@ -3,8 +3,8 @@ SELECT
     G.name as gender_name, T.name as type_name,
     SUM(
         CASE S.id_status WHEN 1 THEN 1 ELSE 0 END
-    ) AS cantidad_fallecidos,
-    COUNT(*) AS cantidad_contagios
+    ) AS death_count,
+    COUNT(*) AS total_count
 FROM
     cases C 
     INNER JOIN 

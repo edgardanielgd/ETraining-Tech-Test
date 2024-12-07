@@ -1,7 +1,8 @@
 SELECT
     D.name as department_name, M.name as municipality_name, 
-    G.name as gender_name, T.name as type_name,
-    TIMESTAMPDIFF(HOUR, C.date_symptom, C.date_recovery) AS recovery_time
+    G.name as gender_name, T.name as type_name, CEILING(Age / 10.0) * 10 as age_range,
+    CAST( SUM( TIMESTAMPDIFF(HOUR, C.date_symptom, C.date_recovery) ), INT) as recovery_time_total,
+    COUNT(*) as cases_count
 FROM
     cases C 
     INNER JOIN 
@@ -18,4 +19,4 @@ WHERE
     S.id_status = 2
 GROUP BY
     D.name, M.name, G.name,
-    T.name
+    T.name, CEILING(Age / 10.0) * 10
