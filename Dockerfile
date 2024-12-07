@@ -1,4 +1,4 @@
-FROM scratch as base
+FROM python:3
 
 # Install Terraform CLI
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common

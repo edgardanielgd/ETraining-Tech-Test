@@ -32,3 +32,9 @@ sudo apt-get install terraform
 2. Apache Spark (PySpark)
 
 Having the base infrastructure to deploy this project, the next step is to create a dataflow by means of PySpark, which allows us to create efficient and reliable ETLs by means of Python, making us able to consume and load from and to different source types, among them, CSV files and MySQL databases. 
+
+`pip install pyspark`
+
+3. Instalar librerias adicionales de python
+
+`pip install dotenv`
