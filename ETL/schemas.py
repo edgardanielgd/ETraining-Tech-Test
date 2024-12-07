@@ -1,5 +1,7 @@
 from pyspark.sql.types import *
 
+# Define sources structure by means of struct definitions
+
 cases_schema = StructType(
    [
         StructField('id_case', IntegerType(), True),
@@ -7,7 +9,7 @@ cases_schema = StructType(
         StructField('age', IntegerType(), True),
         StructField('id_gender', IntegerType(), True),
         StructField('id_type', IntegerType(), True),
-        StructField('id_status', IntegerType(), True),
+        StructField('id_status', DoubleType(), True),
         StructField('date_symptom', TimestampType(), True),
         StructField('date_death', TimestampType(), True),
         StructField('date_diagnosis', TimestampType(), True),
@@ -25,7 +27,7 @@ department_schema = StructType(
 municipality_schema = StructType(
    [
         StructField('id_municipality', IntegerType(), True),
-        StructField('name', VarcharType(200), True),
+        StructField('name_municipality', VarcharType(200), True),
         StructField('id_department', IntegerType(), True)
    ]
 )
@@ -39,7 +41,7 @@ gender_schema = StructType(
 
 type_contagion_schema = StructType(
    [
-        StructField('id_type_contagion', IntegerType(), True),
+        StructField('id_type', IntegerType(), True),
         StructField('name', VarcharType(45), True)
    ]
 )

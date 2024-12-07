@@ -1,2 +1,2 @@
 load:
-	python ./ETL/raw_to_silver.py
+	spark-submit ETL/raw_to_silver.py
