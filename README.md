@@ -93,7 +93,7 @@ Having run the initial ETL (executed locally), the next step is to create a Big 
 
 ![alt text](./Docs/bigquery.png)
 
-A dataset that contains three final tables was created. These tables are feed by three dataflow pipelines. Each of these dataflow pipelines perform a SQL query over the initial Cloud SQL Service and load the results to Big QUery. 
+A dataset that contains three final tables was created. These tables are fed by three dataflow pipelines. Each of these dataflow pipelines perform a SQL query over the initial Cloud SQL Service and load the results to Big QUery. 
 Each ETL run overwrites data in the final consumption tables. All of them are scheduled to be run each Monday at 7:00 am (GMT-5:00)
 Each SQL query performed by dataflows pipelines can be found at ./ETL/SQL
 
@@ -102,7 +102,7 @@ Each SQL query performed by dataflows pipelines can be found at ./ETL/SQL
 The figure below shows an example of a successfull execution of a job forked from a pipeline
 ![alt text](./Docs/JobRun.png)
 
-Finally, a Windows VM was provisioned to show the final report by means of a Report Server service available publicy without need to AD authentication (as PowerBI Service would require).
+Finally, a Windows VM was provisioned to show the final report by means of a Report Server service available publicy without need of AD authentication (as PowerBI Service would require).
 
 ![alt text](./Docs/VM%20Instance.png)
 
