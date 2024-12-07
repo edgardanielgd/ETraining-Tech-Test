@@ -20,14 +20,14 @@ cases_schema = StructType(
 department_schema = StructType(
    [
         StructField('id_department', IntegerType(), True),
-        StructField('name', VarcharType(45), True)
+        StructField('name', StringType(), True)
    ]
 )
 
 municipality_schema = StructType(
    [
         StructField('id_municipality', IntegerType(), True),
-        StructField('name_municipality', VarcharType(200), True),
+        StructField('name_municipality', StringType(), True),
         StructField('id_department', IntegerType(), True)
    ]
 )
@@ -35,20 +35,20 @@ municipality_schema = StructType(
 gender_schema = StructType(
    [
         StructField('id_gender', IntegerType(), True),
-        StructField('name', VarcharType(45), True)
+        StructField('name', StringType(), True)
    ]
 )
 
 type_contagion_schema = StructType(
    [
         StructField('id_type', IntegerType(), True),
-        StructField('name', VarcharType(45), True)
+        StructField('name', StringType(), True)
    ]
 )
 
 status_schema = StructType(
    [
         StructField('id_status', IntegerType(), True),
-        StructField('name', VarcharType(45), True)
+        StructField('name', StringType(), True)
    ]
 )

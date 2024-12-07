@@ -85,7 +85,9 @@ The first step was to create a Cloud SQL Server MySQL instance, the final result
 
 This instance is running at 34.95.234.233:3306
 
-The SQL code that was used to create the full schema of this database instance can be found at ./ETL/SQL/create_database_schema.sql
+The SQL code that was used to create the full schema of this database instance can be found at ./ETL/SQL/create_database_schema.sql.
+
+In order to run the ETL process, we can use the `spark-submit ETL/raw_to_silver.py` command to submit a job that will populate an already created database.
 
 Having run the initial ETL (executed locally), the next step is to create a Big Query instance, which will act as the final consumption zone for reports and data analysts. Here is the final result:
 
